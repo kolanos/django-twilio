@@ -11,39 +11,36 @@ INSTALL_PYTHON_REQUIRES = []
 # For the official support, please visit:
 # https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django
 if sys.version_info[1] in [8, 9, 10, 11]:
-    django_python_version_install = "Django>=4.0,<4.2"
+    django_python_version_install = "Django>=4.0"
     INSTALL_PYTHON_REQUIRES.append(django_python_version_install)
 
 setup(
-
     # Basic package information:
-    name='django-twilio',
-    version='0.14.3.1',
+    name="django-twilio",
+    version="0.14.3.1",
     packages=find_packages(),
-
     # Packaging options:
     zip_safe=False,
     include_package_data=True,
-
     # Package dependencies:
     install_requires=[
-        'setuptools>=36.2',
-        'twilio>=7,<8',
-        'django-phonenumber-field>=0.6',
-        'phonenumbers>=8.10.22',
-    ] + INSTALL_PYTHON_REQUIRES,
-
+        "setuptools>=36.2",
+        "twilio>=7,<8",
+        "django-phonenumber-field>=0.6",
+        "phonenumbers>=8.10.22",
+    ]
+    + INSTALL_PYTHON_REQUIRES,
     # Metadata for PyPI:
-    author='Randall Degges',
-    author_email='rdegges@gmail.com',
+    author="Randall Degges",
+    author_email="rdegges@gmail.com",
     maintainer="Jason Held",
     maintainer_email="jasonsheld@gmail.com",
-    license='UNLICENSE',
-    url='https://github.com/rdegges/django-twilio',
-    keywords='twilio telephony call phone voip sms django django-twilio',
-    description='Build Twilio functionality into your Django apps.',
+    license="UNLICENSE",
+    url="https://github.com/rdegges/django-twilio",
+    keywords="twilio telephony call phone voip sms django django-twilio",
+    description="Build Twilio functionality into your Django apps.",
     long_description=open(
-        normpath(join(dirname(abspath(__file__)), 'README.rst'))
+        normpath(join(dirname(abspath(__file__)), "README.rst"))
     ).read(),
     project_urls={
         "Documentation": "https://django-twilio.readthedocs.io/en/latest/",
@@ -51,22 +48,22 @@ setup(
         "Tracker": "https://github.com/rdegges/django-twilio/issues",
     },
     classifiers=[
-        'Framework :: Django',
-        'Framework :: Django :: 4.0',
-        'Framework :: Django :: 4.1',
-        'Intended Audience :: Developers',
-        'License :: Public Domain',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Topic :: Internet :: WWW/HTTP',
-    ]
-
+        "Framework :: Django",
+        "Framework :: Django :: 4.0",
+        "Framework :: Django :: 4.1",
+        "Framework :: Django :: 4.2",
+        "Intended Audience :: Developers",
+        "License :: Public Domain",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Internet :: WWW/HTTP",
+    ],
 )
